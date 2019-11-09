@@ -13,7 +13,7 @@ namespace FizzBuzzApi.Services
         public string BuildMessage(FizzBuzzModel model)
         {
             var message = "";
-            for(var i = 1; i < model.MaxNumber; i++)
+            for(var i = 1; i <= model.MaxNumber; i++)
             {
                 message += GetPhrase(model, i);
             }
@@ -21,7 +21,7 @@ namespace FizzBuzzApi.Services
             return message;
         }
 
-        private string GetPhrase(FizzBuzzModel m, int i)
+        public string GetPhrase(FizzBuzzModel m, int i)
         {
             if(i % m.Num1 == 0)
             {
