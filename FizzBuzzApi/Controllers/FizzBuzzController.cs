@@ -21,9 +21,14 @@ namespace FizzBuzzApi.Controllers
         }
 
         [HttpPost]
-        public string Post([FromBody] FizzBuzzModel model)
+        public ActionResult Post([FromBody] FizzBuzzModel model)
         {
-            return _fizzBuzzService.BuildMessage(model);
+            if (!ModelState.IsValid)
+            {
+                return new BadRequestObjectResult(ModelState);
+            }
+
+            return Ok(_fizzBuzzService.BuildMessage(model));
         }
     }
 }
