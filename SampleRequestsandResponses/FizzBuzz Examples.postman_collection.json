@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "f8d8f30f-ecea-4ed8-bc22-8e347eadecf2",
+		"name": "FizzBuzz Examples",
+		"description": "Different requests against the generic FizzBuzz api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FizzBuzz Endpoint",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"maxNumber\": 100,\n\t\"num1\": 3,\n\t\"num2\": 5,\n\t\"message1\": \"Fizz\",\n\t\"message2\": \"Buzz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/fizzbuzz",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"fizzbuzz"
+					]
+				},
+				"description": "Original fizz buzz"
+			},
+			"response": [
+				{
+					"name": "All ones",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maxNumber\": 100,\n\t\"num1\": 1,\n\t\"num2\": 1,\n\t\"message1\": \"Fizz\",\n\t\"message2\": \"Buzz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/fizzbuzz",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"fizzbuzz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2019 00:11:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "FizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\nFizzBuzz\n"
+				},
+				{
+					"name": "Invalid num1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maxNumber\": 100,\n\t\"num1\": 5.0,\n\t\"num2\": 3,\n\t\"message1\": \"Fizz\",\n\t\"message2\": \"Buzz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/fizzbuzz",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"fizzbuzz"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2019 00:12:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"num1\": [\n        \"Input string '5.0' is not a valid integer. Path 'num1', line 3, position 12.\"\n    ]\n}"
+				},
+				{
+					"name": "Original Fizz Buzz",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maxNumber\": 100,\n\t\"num1\": 3,\n\t\"num2\": 5,\n\t\"message1\": \"Fizz\",\n\t\"message2\": \"Buzz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/fizzbuzz",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"fizzbuzz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2019 00:07:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n"
+				},
+				{
+					"name": "FizzBuzz with num1 and num2 swapped",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maxNumber\": 100,\n\t\"num1\": 5,\n\t\"num2\": 3,\n\t\"message1\": \"Fizz\",\n\t\"message2\": \"Buzz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/fizzbuzz",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"fizzbuzz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2019 00:11:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "1\n2\nBuzz\n4\nFizz\nBuzz\n7\n8\nBuzz\nFizz\n11\nBuzz\n13\n14\nFizzBuzz\n16\n17\nBuzz\n19\nFizz\nBuzz\n22\n23\nBuzz\nFizz\n26\nBuzz\n28\n29\nFizzBuzz\n31\n32\nBuzz\n34\nFizz\nBuzz\n37\n38\nBuzz\nFizz\n41\nBuzz\n43\n44\nFizzBuzz\n46\n47\nBuzz\n49\nFizz\nBuzz\n52\n53\nBuzz\nFizz\n56\nBuzz\n58\n59\nFizzBuzz\n61\n62\nBuzz\n64\nFizz\nBuzz\n67\n68\nBuzz\nFizz\n71\nBuzz\n73\n74\nFizzBuzz\n76\n77\nBuzz\n79\nFizz\nBuzz\n82\n83\nBuzz\nFizz\n86\nBuzz\n88\n89\nFizzBuzz\n91\n92\nBuzz\n94\nFizz\nBuzz\n97\n98\nBuzz\nFizz\n"
+				},
+				{
+					"name": "Empty Post Body",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/fizzbuzz",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"fizzbuzz"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2019 00:15:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Num1\": [\n        \"The field Num1 must be between 1 and 2147483647.\"\n    ],\n    \"Num2\": [\n        \"The field Num2 must be between 1 and 2147483647.\"\n    ],\n    \"Message1\": [\n        \"The Message1 field is required.\"\n    ],\n    \"Message2\": [\n        \"The Message2 field is required.\"\n    ],\n    \"MaxNumber\": [\n        \"The field MaxNumber must be between 1 and 2147483647.\"\n    ]\n}"
+				},
+				{
+					"name": "Max exceded",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maxNumber\": 10000,\n\t\"num1\": 5,\n\t\"num2\": 3,\n\t\"message1\": \"Fizz\",\n\t\"message2\": \"Buzz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/fizzbuzz",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"fizzbuzz"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2019 00:22:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"MaxNumber\": [\n        \"The field MaxNumber must be between 1 and 1000.\"\n    ]\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
