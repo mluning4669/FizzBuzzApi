@@ -8,11 +8,11 @@ namespace FizzBuzzApi.Models
 {
     public class FizzBuzzModel
     {
-        [Range(1,int.MaxValue)]
+        [Range(1,1000)]
         public int MaxNumber { get; set; }
-        [Range(1, int.MaxValue)]
+        [Range(1, 100)]
         public int Num1 { get; set; }
-        [Range(1, int.MaxValue)]
+        [Range(1, 100)]
         public int Num2 { get; set; }
         [Required]
         public string Message1 { get; set; }
