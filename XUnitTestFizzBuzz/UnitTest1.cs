@@ -16,48 +16,39 @@ namespace XUnitTestFizzBuzz
             _fizzBuzzService = new FizzBuzzService();
             TestModel = new FizzBuzzModel
             {
-                MaxNumber = 150,
-                Num1 = 5,
-                Num2 = 7,
+                MaxNumber = 100,
+                Num1 = 3,
+                Num2 = 5,
                 Message1 = "Fizz",
                 Message2 = "Buzz"
             };
         }
 
-        [Theory]
-        [InlineData(6)]
-        [InlineData(5)]
-        [InlineData(10)]
-        [InlineData(20)]
-        public void GetPhraseTestFizz(int value)
+        [Fact]
+        public void BuildMessageTest()
         {
-            var result = _fizzBuzzService.GetPhrase(TestModel, value);
-
-            Assert.Equal("Fizz\n", result);
+            for(var i = 1; i <= TestModel.MaxNumber; i++)
+            {
+                var result = _fizzBuzzService.GetPhrase(TestModel, i);
+                if (i % TestModel.Num1 == 0 && i % TestModel.Num2 == 0)
+                {
+                    Assert.Equal("FizzBuzz\n", result);
+                }
+                else if(i % TestModel.Num1 == 0)
+                {
+                    Assert.Equal("Fizz\n", result);
+                }
+                else if(i % TestModel.Num2 == 0)
+                {
+                    Assert.Equal("Buzz\n", result);
+                }
+                else
+                {
+                    Assert.Equal(i.ToString() + "\n", result);
+                }
+                
+            }
         }
 
-        [Theory]
-        [InlineData(8)]
-        [InlineData(7)]
-        [InlineData(14)]
-        [InlineData(21)]
-        public void GetPhraseTestBuzz(int value)
-        {
-            var result = _fizzBuzzService.GetPhrase(TestModel, value);
-
-            Assert.Equal("Buzz\n", result);
-        }
-
-        [Theory]
-        [InlineData(36)]
-        [InlineData(35)]
-        [InlineData(70)]
-        [InlineData(105)]
-        public void GetPhraseTestFizzBuzz(int value)
-        {
-            var result = _fizzBuzzService.GetPhrase(TestModel, value);
-
-            Assert.Equal("FizzBuzz\n", result);
-        }
     }
 }
